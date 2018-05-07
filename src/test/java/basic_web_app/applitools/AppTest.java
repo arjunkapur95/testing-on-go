@@ -60,6 +60,14 @@ public class AppTest
 
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();
+        BatchInfo batchInfo = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
+    	// If the test runs via Jenkins, set the batch ID accordingly.
+    	String batchId = System.getenv("APPLITOOLS_BATCH_ID");
+    	if (batchId != null) {
+    	    batchInfo.setId(batchId);
+    	}
+    	eyes.setBatch(batchInfo);
+        
         eyes.setApiKey("998qD2l103S3i1frBsZ0tkCJkGVlNdLF98j7xuuHD17nUs110");
 
         try {
@@ -126,6 +134,13 @@ public class AppTest
 
         // Initialize the eyes SDK and set your private API key.
         Eyes eyes = new Eyes();
+        BatchInfo batchInfo = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
+    	// If the test runs via Jenkins, set the batch ID accordingly.
+    	String batchId = System.getenv("APPLITOOLS_BATCH_ID");
+    	if (batchId != null) {
+    	    batchInfo.setId(batchId);
+    	}
+    	eyes.setBatch(batchInfo);
         eyes.setApiKey("998qD2l103S3i1frBsZ0tkCJkGVlNdLF98j7xuuHD17nUs110");
 
         try {

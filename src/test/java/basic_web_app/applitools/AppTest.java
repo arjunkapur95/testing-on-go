@@ -42,7 +42,7 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
-    /**
+   /* /**
      * Rigourous Test :-)
      * @throws URISyntaxException 
      */
@@ -115,7 +115,7 @@ public class AppTest
         }
        
         assertTrue( true );
-    }
+    }*/
     /**
      * Rigourous Test :-)
      * @throws URISyntaxException 
